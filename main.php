@@ -13,13 +13,8 @@ $total_questions = mysqli_num_rows(mysqli_query($connection,$query));
 </head>
 <body>
 		<div class="container">
-			.
+			<div id="home" class="flex-column flex-center">
 			<h1>Bible Quiz</h1>
-		</div>
-
-
-	<main>
-			<div class="container">
 				<h2>Test Your Bible Knowledge</h2>
 				<p>
 					This is a multiple choice quiz to test your Bible Knowledge.
@@ -32,8 +27,8 @@ $total_questions = mysqli_num_rows(mysqli_query($connection,$query));
 				</ul>
 
 				<a href="question.php?n=1" class="start">Start Quiz</a>
-
 			</div>
+		</div>
 
 	</main>
 </body>

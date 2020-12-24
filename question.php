@@ -24,17 +24,12 @@
 <head>
 	<title>Bible Quiz</title>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
 </head>
 <body>
-
-	<header>
-		<div class="container">
-			<p>Bible Quiz</p>
-		</div>
-	</header>
-
-	<main>
-			<div class="container">
+	<div class="container">
+			<div id="home" class="flex-column flex-center">
+			<h1>Bible Quiz</h1>
 				<div class="current">Question <?php echo $number; ?> of <?php echo $total_questions; ?> </div>
 				<p class="question"><?php echo $question['question_text']; ?> </p>
 				<form method="POST" action="process.php">
@@ -48,12 +43,8 @@
 					<input type="hidden" name="number" value="<?php echo $number; ?>">
 					<input type="submit" name="submit" value="Submit">
 
-
 				</form>
-				
-
-			</div>
-
-	</main>
+				</div>
+	</div>
 </body>
 </html>
