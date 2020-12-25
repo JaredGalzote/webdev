@@ -13,7 +13,7 @@ session_start();
 <body>
 	<div class="container">
 			<div id="home" class="flex-column flex-center">
-			<h1>Congratulations</h1>
+			<h1>Bible Quiz</h1>
 				<h2>Your Result</h2>
 				<p>Congratulation You have completed this test succesfully.</p>
 				<p>Your <strong>Score</strong> is <?php echo $_SESSION['score']*10; ?>  </p>
