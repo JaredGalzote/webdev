@@ -28,32 +28,23 @@
 </head>
 <body>
 	<div class="container">
-			<div id="game" class="justify-center flex-column">
-				<div id="hud">
-					<div class="hud-item">
-						<p id="progressText" class="hud-prefix">Question</p>
-						<div id="progressBar">
-							<div class="progressBarFull"></div>
-						</div>
-					</div>
-				</div>
-					<div id="question">
-						<p class="question"><?php echo $question['question_text']; ?> </p>
-						<form method="POST" action="process.php">
-					</div>
-					<div class="choice-container">
-						<ul class="choice">
-							<p class="choice-prefix">
-							<?php while($row=mysqli_fetch_assoc($choices)){ ?>
-							<li><input type="radio" name="choice" value="<?php echo $row['id']; ?>"><?php echo $row['coption']; ?></li>
-							<?php } ?>	</p>				
-						</ul>
-					</div>
-						<input type="hidden" name="number" value="<?php echo $number; ?>">
-						<input type="submit" name="submit" value="Submit">
+			<div id="home" class="flex-column flex-center">
+			<h1>Bible Quiz</h1>
+				<div class="current">Question <?php echo $number; ?> of <?php echo $total_questions; ?> </div>
+				<p class="question"><?php echo $question['question_text']; ?> </p>
+				<form method="POST" action="process.php">
+					<ul class="choicess">
+						<?php while($row=mysqli_fetch_assoc($choices)){ ?>
+						<li><input type="radio" name="choice" value="<?php echo $row['id']; ?>"><?php echo $row['coption']; ?></li>
+						<?php } ?>
+						
+						
+					</ul>
+					<input type="hidden" name="number" value="<?php echo $number; ?>">
+					<input type="submit" name="submit" value="Submit">
 
-					</form>
-			</div>
+				</form>
+				</div>
 	</div>
 </body>
 </html>
